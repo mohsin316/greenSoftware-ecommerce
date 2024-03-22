@@ -4,9 +4,9 @@ app = Flask(__name__)
 
 # Sample data for products and cart
 products = [
-    {"id": 1, "name": "Product 1", "price": 10, "description": "Description 1"},
-    {"id": 2, "name": "Product 2", "price": 20, "description": "Description 2"},
-    {"id": 3, "name": "Product 3", "price": 30, "description": "Description 3"},
+    {"id": 1, "name": "iphone", "price": 10, "description": "Description 1"},
+    {"id": 2, "name": "macbook", "price": 20, "description": "Description 2"},
+    {"id": 3, "name": "ipad", "price": 30, "description": "Description 3"},
 ]
 
 cart = {}
@@ -15,6 +15,21 @@ cart = {}
 @app.route('/')
 def index():
     return render_template('index.html', products=products)
+
+
+@app.route('/search_product', methods=['POST'])
+def search_product():
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'Invalid JSON data'}), 400
+
+    item = data.get("search")
+    res = []
+    for product in products:
+        if item.lower() in product['name'].lower():
+            res.append(product)
+
+    return jsonify({"searched": res})
 
 
 @app.route('/all_products')
