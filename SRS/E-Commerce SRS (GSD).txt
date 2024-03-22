@@ -1,0 +1,119 @@
+﻿Introduction
+E-commerce platforms are a convenient and secure way to search, select and purchase products online. They provide detailed product information, easier transactions and a variety of products.
+
+
+Requirement analysis
+
+
+
+
+1. Traditional way is inconvenient because you have to physically visit the store to get the products.
+
+
+2. Transparency : The listing of products is not proper on the sites. False ratings and reviews are added by the sellers. 
+
+
+3. The number of products available in store is limited and restocking takes time. Also tracing orders in traditional methods is tedious because of manual paperwork.
+
+
+4. Customer support : The process for return or refund is lengthy and leaves a bad impact on the customer.
+
+
+5. Page load speeds : Users simply move to other e-commerce sites to find the same product if a page takes time to load.
+
+
+Functional Specifications
+
+
+Client Side : 
+
+
+1. User Registration : The Sign-in and Sign-up should be quick. (Sign-up through third parties such as google etc. should be added). Password recovery should be added.
+
+
+2. Searching : Users should be able search products according to different categories and filters such as price, category, ratings.
+
+
+3. Cart Options : Options to add, remove, view product from the cart should be provided. Detailed price breakdown of products added in the cart should be displayed.
+
+
+4. Order tracking : Users should be able to track their order at each stage.
+
+
+5. Providing customer support in multiple ways such as emails and helplines. These requests must be addressed. (AI bots can be integrated to make sure all requests are responded to.)
+
+
+6. Payment : Multiple payment options should be provided (UPI, Cards, COD).
+
+
+Use cases for client side (Users) : 
+* Browsing and Searching
+* Product Details and Reviews
+* Adding to Cart and Wishlist
+* Checkout and Payment
+* Order Tracking and History
+* Customer Support
+
+
+Administrator : 
+
+
+1. Products : Administrators should be able to monitor details of every product and add, remove, edit them and allocate them to their respective categories.
+
+
+2. Manage Orders : Administrators should be able to view and process orders.
+
+
+3. Monitor : They should be able to monitor orders and history as well as should be able to view required details of clients.
+
+
+4. To increase transparency - Sellers verification must be done so that fake products are not added to the website.
+
+
+Use cases for administrator (Seller) : 
+* Product Management
+* Order Management
+* Inventory Management
+* Sales Analytics
+* Customer Communication
+* Returns and Refunds
+
+
+
+
+External Interface Specifications
+
+
+1. User Interface : The website must be responsive for all types of devices (Laptop, Phone, Tablets). And the navigation should be intuitive.
+
+
+2. Protocols : HTTP with SSL to provide secure data transfer and authentication. Also REST can be used for client-server communication. Proper documentation of endpoints and request response formats must be maintained.
+
+
+3. The website should be compatible with all types of popular browsers.
+
+
+4. Databases : SQL and NoSQL databases should be used in a way that retrieving product information is fast as well as at times of high traffic they should easily scale.
+
+
+Technical Specifications
+
+
+1. Performance Constraints :
+* Server Side Rendering should be implemented to reduce load times.
+* Product Images should be encoded such that they take less time to load.
+* Optimization of CDN.
+
+
+2. Heavy Traffic : At times of sales or heavy traffic the infrastructure (database, api, server) should be able to handle ~2000 concurrent users.
+* Load balancing and caching must be implemented, 
+
+
+3. All the products and related information shown to the customer needs to be authentic
+* Reviews added to the products must be moderated beforehand.
+
+
+4. Deployment : 
+* Deployment on cloud platforms as they handle scaling.
+* S3 for static content and Lambda, DynamoDB for dynamic layers.
+* Optional : Authentication and emailing services provided by these CSP’s can be used as well.
