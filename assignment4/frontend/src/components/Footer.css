@@ -1,0 +1,147 @@
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer .even-columns {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.category-navigation {
+  margin-top: 3.25rem;
+}
+
+.category-navigation ul {
+  margin-block: 3rem;
+  display: flex;
+  text-transform: uppercase;
+  font-size: var(--fs-13);
+  letter-spacing: 2px;
+  line-height: 25px;
+  flex-direction: column;
+}
+
+.category-navigation ul a {
+  font-weight: var(--fw-B);
+  text-decoration: none;
+  color: white;
+  transition: color ease-in-out 250ms;
+}
+
+.category-navigation ul a:hover,
+.category-navigation ul a:focus {
+  color: hsl(var(--clr-accent-1));
+}
+
+.footer-description p {
+  font-size: var(--fs-15);
+  line-height: 25px;
+  max-width: 350px;
+  opacity: 0.5;
+}
+
+.copyright p {
+  font-size: var(--fs-15);
+  margin-block: 3rem;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+.socials ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.375rem;
+}
+
+@media (min-width: 48em) {
+  footer .even-columns {
+    grid-template-columns: 1fr 120px;
+    grid-template-areas:
+      "navigation navigation"
+      "description description"
+      "copyright social";
+  }
+  .category-navigation {
+    place-self: start;
+    grid-area: navigation;
+  }
+
+  .footer-description {
+    place-self: start;
+    grid-area: description;
+  }
+  .copyright {
+    justify-self: start;
+    align-self: self-start;
+    grid-area: copyright;
+  }
+  .socials {
+    justify-self: start;
+    align-self: flex-end;
+    grid-area: social;
+  }
+
+  .category-navigation {
+    margin-top: 3.75rem;
+  }
+
+  .category-navigation ul {
+    --spacer: 0rem;
+    margin-block: 2rem;
+    display: flex;
+    gap: 2.125rem;
+    flex-direction: row;
+  }
+
+  .footer-description p {
+    text-align: left;
+    max-width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  .socials ul {
+    margin-bottom: 2.875rem;
+  }
+  .copyright p {
+    margin-block: 0 2.875rem;
+  }
+}
+
+@media (min-width: 60em) {
+  footer .even-columns {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "navigation navigation"
+      "description description"
+      "description social"
+      "copyright copyright";
+  }
+
+  .category-navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .category-navigation img {
+    width: 145px;
+  }
+
+  .footer-description {
+    margin-top: 1rem;
+    max-width: 540px;
+    align-self: center;
+  }
+
+  .socials {
+    grid-row: 2/3;
+    margin-top: 3.75rem;
+    align-self: center;
+    justify-self: self-end;
+  }
+}

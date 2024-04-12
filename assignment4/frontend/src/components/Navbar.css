@@ -1,0 +1,251 @@
+header {
+  background-color: hsl(var(--clr-primary-2));
+  color: white;
+  position: relative;
+}
+
+header .container {
+  background-color: hsl(var(--clr-primary-2));
+  display: flex;
+}
+
+.logo-link {
+  display: block;
+}
+
+.primary-navigation a {
+  color: white;
+  transition: color ease-in-out 250ms;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus {
+  color: hsl(var(--clr-accent-1));
+}
+
+header .hamburger {
+  display: none;
+}
+header button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.mobile-only-arrow {
+  display: none;
+}
+
+.primary-navigation img {
+  display: none;
+}
+.cart-auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.cart {
+  position: relative;
+}
+.cart > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: var(--fs-13);
+  width: 18px;
+  height: 18px;
+  font-weight: var(--fw-B);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -75%);
+  background-color: hsl(var(--clr-accent-1));
+}
+
+.userLoginSignup {
+  height: 21px;
+  width: 21px;
+}
+
+@media (max-width: 60em) {
+  .primary-navigation a {
+    color: black;
+  }
+  header button:nth-of-type(1),
+  header button:nth-of-type(2) {
+    display: block;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+  header {
+    /* change to grey */
+    border-bottom: 1px solid hsl(0, 0%, 59%, 0.1);
+  }
+  header .container {
+    justify-content: space-between;
+    padding-block: 2rem;
+  }
+  .primary-navigation {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border-radius: 0px 0px 8px 8px;
+    z-index: 10000000000;
+    inset: 5.55rem 0 auto;
+    box-shadow: 0px 30px 30px 0px hsl(0, 0%, 0%, 0.3);
+  }
+
+  /* temporary opening and closing */
+  .close {
+    top: -1000px;
+  }
+
+  .open {
+    top: 5.55rem;
+  }
+
+  .primary-navigation ul {
+    padding: 0 1.5rem 2rem;
+  }
+
+  .spacer {
+    --spacer: 5.5rem;
+  }
+
+  .primary-navigation li {
+    width: 100%;
+    max-width: 375px;
+    display: flex;
+    position: relative;
+    height: 165px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 1.4rem;
+    align-items: center;
+    text-transform: uppercase;
+    list-style: none;
+    background-color: hsl(var(--clr-bg-1));
+  }
+
+  .primary-navigation li img {
+    height: 150px;
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 18%);
+  }
+
+  .primary-navigation a {
+    text-decoration: none;
+  }
+
+  .primary-navigation a:not(.mobile-only) {
+    font-weight: var(--fw-B);
+    font-size: var(--fs-15);
+    letter-spacing: 1.1px;
+  }
+
+  .primary-navigation a.mobile-only {
+    margin-top: 1rem;
+    position: relative;
+    font-weight: var(--fw-B);
+    font-size: var(--fs-13);
+    color: #797979;
+    letter-spacing: 1.1px;
+  }
+
+  .primary-navigation a.mobile-only div {
+    height: 10px;
+    width: 5px;
+    top: 4px;
+    right: -15px;
+    position: absolute;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* removing home navigation */
+  .primary-navigation > ul > li:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .primary-navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 60em) and (min-width: 48em) {
+  .cart-auth {
+    gap: 1rem;
+  }
+  .primary-navigation ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 1.5rem 4.1rem;
+  }
+
+  header {
+    border-bottom: 0;
+  }
+
+  header .container {
+    justify-content: start;
+    padding-block: 2rem;
+    /* change to grey */
+    border-bottom: 2.25px solid hsl(0, 0%, 59%, 0.1);
+  }
+
+  header .logo {
+    margin-left: 2.625rem;
+  }
+
+  header .cart-auth {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 60em) {
+  header .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem 2.25rem;
+    border-bottom: 2px solid #252525;
+    position: relative;
+  }
+
+  .primary-navigation ul {
+    margin-right: 6.5rem;
+    --spacer: 0;
+    gap: 2rem;
+    list-style: none;
+    display: flex;
+  }
+
+  .primary-navigation a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-size: var(--fs-13);
+    font-weight: var(--fw-B);
+    text-decoration: none;
+  }
+}

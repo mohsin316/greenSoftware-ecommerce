@@ -1,0 +1,142 @@
+.category-section .container {
+  margin-block: 5.75rem 7.5rem;
+}
+
+.category-section .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.category {
+  width: 100%;
+  position: relative;
+  max-width: 350px;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  text-transform: uppercase;
+  list-style: none;
+  background-color: hsl(var(--clr-bg-1));
+}
+
+.category-spacer {
+  --spacer: 4.25rem;
+}
+
+.category img {
+  height: 150px;
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.category-link {
+  margin-top: 5.5rem;
+  text-decoration: none;
+  font-weight: var(--fw-B);
+  font-size: var(--fs-15);
+  color: black;
+  letter-spacing: 1.1px;
+  transition: color ease-in-out 250ms;
+}
+
+.category-shop-link {
+  margin-block: 1rem 1.375rem;
+  text-decoration: none;
+  position: relative;
+  font-weight: var(--fw-B);
+  font-size: var(--fs-13);
+  color: #797979;
+  letter-spacing: 1.1px;
+  transition: color ease-in-out 250ms;
+}
+
+.category-shop-link:hover,
+.category-link:hover,
+.category-link:focus,
+.category-shop-link:focus {
+  color: hsl(var(--clr-accent-1));
+}
+
+.category-shop-link div {
+  height: 10px;
+  width: 5px;
+  top: 4px;
+  right: -15px;
+  position: absolute;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 48em) {
+  .category-section .container {
+    margin-block: 9.25rem 6rem;
+  }
+
+  .category-section > .container > div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.625rem;
+  }
+  .category-spacer {
+    --spacer: 0rem;
+  }
+
+  .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .category-link {
+    margin-top: 5.5rem;
+  }
+
+  .category-shop-link {
+    margin-block: 1rem 1.375rem;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .category-section .container {
+    margin-block: 12.5rem 10.5rem;
+  }
+
+  .category-section > .container > div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+  .category-spacer {
+    --spacer: 0rem;
+  }
+
+  .category {
+    height: 204px;
+  }
+
+  .category img {
+    height: 190px;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+  }
+
+  .category-link {
+    font-size: var(--fs-18);
+    margin-top: 7.25rem;
+  }
+
+  .category-shop-link {
+    margin-block: 1rem 1.875rem;
+  }
+}

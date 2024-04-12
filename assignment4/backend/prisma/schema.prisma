@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id            String     @id @default(uuid())
+  slug          String
+  name          String     @default("null")
+  cartName      String?
+  productImage  Image[]    @relation("ProductImage")
+  category      String
+  categoryImage Image[]    @relation("CategoryImage")
+  new           Boolean
+  price         Float
+  description   String
+  features      String
+  includes      BoxItems[]
+  gallery       Image[]    @relation("Gallery")
+  others        Others[]
+}
+
+model Image {
+  id              String   @id @default(uuid())
+  mobile          String
+  tablet          String
+  desktop         String
+  productImage    Product? @relation("ProductImage", fields: [productImageId], references: [id], onDelete: Cascade)
+  productImageId  String?
+  categoryImage   Product? @relation("CategoryImage", fields: [CategoryImageId], references: [id], onDelete: Cascade)
+  CategoryImageId String?
+  Gallery         Product? @relation("Gallery", fields: [GalleryId], references: [id], onDelete: Cascade)
+  GalleryId       String?
+  Others          Others?  @relation(fields: [othersId], references: [id], onDelete: Cascade)
+  othersId        String?
+}
+
+model BoxItems {
+  id        String   @id @default(uuid())
+  quantity  Int
+  item      String
+  Product   Product? @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String?
+}
+
+model Others {
+  id        String   @id @default(uuid())
+  slug      String
+  name      String
+  image     Image[]
+  Product   Product? @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String?
+  itemId    String?
+  cartName  String?
+  category  String?
+}
+
+model User {
+  id       String   @id @default(cuid())
+  username String
+  email    String   @unique
+  isAdmin  Boolean  @default(false)
+  orders   Orders[]
+}
+
+model Orders {
+  id            String         @id @default(cuid())
+  User          User?          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date          DateTime       @default(now())
+  userId        String?
+  name          String
+  email         String
+  phoneNumber   String
+  address       String
+  zip           String
+  city          String
+  country       String
+  paymentMethod String
+  totalAmount   Float
+  products      OrderProduct[]
+}
+
+model OrderProduct {
+  id       String  @id @default(cuid())
+  Orders   Orders? @relation(fields: [ordersId], references: [id], onDelete: Cascade)
+  ordersId String?
+  name     String
+  quantity Int
+  price    Float
+  imageURL String
+}

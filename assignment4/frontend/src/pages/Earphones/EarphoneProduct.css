@@ -1,0 +1,35 @@
+.earphone-product-section {
+  margin-top: 1rem;
+}
+
+.earphone-product-section .product-details h2 {
+  max-width: 350px;
+}
+
+@media (min-width: 40em) {
+  .earphone-product-section {
+    margin-top: 2rem;
+  }
+  .earphone-product-section .even-columns {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    position: relative;
+    gap: 4.31rem;
+  }
+  .earphone-product-section .even-columns {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .earphone-product-section {
+    margin-top: 5rem;
+  }
+  .earphone-product-section .even-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+  }
+  .earphone-product-section .even-columns {
+    padding-top: 4.7rem;
+  }
+}

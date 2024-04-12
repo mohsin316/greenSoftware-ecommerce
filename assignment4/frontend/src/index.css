@@ -1,0 +1,163 @@
+:root {
+  --clr-primary-1: 0, 0%, 100%;
+  --clr-primary-2: 0, 0%, 6%;
+
+  --clr-accent-1: 22, 65%, 57%;
+
+  --clr-bg-1: 0, 0%, 95%;
+
+  --fw-R: 400;
+  --fw-M: 500;
+  --fw-B: 700;
+
+  /* h1 */
+  --fs-56: 3.5rem;
+  /* h2 */
+  --fs-40: 2.5rem;
+  /* h3 */
+  --fs-32: 2rem;
+  /* h4 */
+  --fs-28: 1.75rem;
+  /* h5 */
+  --fs-24: 1.5rem;
+  /* h6 */
+  --fs-18: 1.125rem;
+  /* p */
+  --fs-15: 0.9375rem;
+  /* overline */
+  --fs-14: 0.875rem;
+  /* subtitle */
+  --fs-13: 0.8125rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+}
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 3rem;
+
+  width: min(var(--max-width), 100% - var(--padding));
+  margin-inline: auto;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--spacer, 1rem);
+}
+
+@media (min-width: 37.5em) {
+  .container {
+    --padding: 5rem;
+  }
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+  width: 85%;
+  height: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.125rem;
+}
+.skeleton-text-short {
+  width: 35%;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-header {
+  width: 60%;
+  height: 4rem;
+  margin-bottom: 3rem;
+  border-radius: 0.125rem;
+}
+
+.loading-button-skeleton {
+  margin-top: 2rem;
+}
+
+.product-details-skeleton {
+  justify-content: center;
+  padding-top: 3rem;
+  margin-block: auto;
+}
+
+@media (min-width: 60em) {
+  .product-details-skeleton {
+    margin-left: 5rem;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}

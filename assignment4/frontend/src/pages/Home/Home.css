@@ -1,0 +1,548 @@
+/* ========================================================= */
+/* HERO SECTION START */
+/* ========================================================= */
+
+.hero-section {
+  background-color: hsl(var(--clr-primary-2));
+  color: white;
+  position: relative;
+  isolation: isolate;
+}
+
+@media (max-width: 60em) {
+  .hero-introduction {
+    padding: 6.75rem 1.5rem 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-introduction strong {
+    letter-spacing: 10px;
+    font-size: var(--fs-14);
+    font-weight: var(--fw-R);
+    opacity: 0.5;
+  }
+
+  .hero-introduction h1 {
+    margin-top: 16px;
+    max-width: 400px;
+    font-weight: var(--fw-B);
+    line-height: 40px;
+    letter-spacing: 1.29px;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+  }
+
+  .hero-introduction p {
+    margin-top: 24px;
+    max-width: 350px;
+    opacity: 0.75;
+    font-weight: var(--fw-M);
+    line-height: 25px;
+    font-size: var(--fs-15);
+  }
+
+  .hero-introduction a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 28px;
+    width: 160px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(var(--clr-accent-1));
+    font-size: var(--fs-13);
+    font-weight: var(--fw-B);
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 15em) {
+  .hero-section .container .hero-image {
+    opacity: 0.5;
+    background-image: url("../../../public/assests/mobile/image-header.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+  }
+}
+
+@media (min-width: 26.125em) {
+  .hero-section .container .hero-image {
+    background-position: center -150px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 43.75em) {
+  .hero-introduction {
+    padding: 7.875rem 1.5rem 10.4375rem;
+  }
+  .hero-introduction h1 {
+    margin-top: 1.5rem;
+    font-weight: var(--fw-B);
+    line-height: 58px;
+    letter-spacing: 2px;
+    font-size: var(--fs-56);
+    text-transform: uppercase;
+  }
+  .hero-introduction a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 2.5rem;
+    font-size: var(--fs-13);
+    font-weight: var(--fw-B);
+    letter-spacing: 1px;
+  }
+
+  .hero-section .container .hero-image {
+    background-image: url("../../../public/assests/tablet/image-header.jpg");
+    background-position: center -40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 48em) {
+  .hero-section .container .hero-image {
+    background-position: center -80px;
+  }
+}
+
+@media (min-width: 50em) {
+  .hero-section .container .hero-image {
+    background-position: center -115px;
+  }
+}
+
+@media (min-width: 55em) {
+  .hero-section .container .hero-image {
+    background-position: center -145px;
+  }
+}
+
+@media (min-width: 60em) {
+  .hero-section {
+    background-color: #191919;
+  }
+  .hero-section .container .hero-image {
+    opacity: 1;
+    background-image: url("../../../public/assests/desktop/image-hero.jpg");
+    background-position: center -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-introduction {
+    padding-block: 8rem 9.875rem;
+    padding-inline: 0;
+    max-width: 400px;
+  }
+
+  .hero-introduction strong {
+    font-weight: var(--fw-R);
+    font-size: var(--fs-14);
+    letter-spacing: 10px;
+    opacity: 0.5;
+  }
+
+  .hero-introduction h1 {
+    margin-block: 1.5rem;
+    text-transform: uppercase;
+    max-width: 400px;
+    font-size: var(--fs-56);
+    font-weight: var(--fw-B);
+    letter-spacing: 2px;
+  }
+
+  .hero-introduction p {
+    max-width: 350px;
+    margin-bottom: 2.5rem;
+    font-size: var(--fs-15);
+    opacity: 0.75;
+    line-height: 25px;
+  }
+
+  .hero-introduction a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 0;
+    width: 160px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    background-color: hsl(var(--clr-accent-1));
+    font-size: var(--fs-13);
+    font-weight: var(--fw-B);
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    transition: opacity ease-in-out 250ms;
+  }
+  .hero-introduction a:hover,
+  .hero-introduction a:focus {
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 81.25em) {
+  .hero-section {
+    background-color: #191919;
+  }
+  .hero-section .container {
+    background-color: #191919;
+    background-image: url("../../../public/assests/desktop/image-hero.jpg");
+    background-position-y: -50px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hero-section .container .hero-image {
+    background-image: none;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+/* ========================================================= */
+/* HERO SECTION END */
+/* ========================================================= */
+
+/* ========================================================= */
+/* LATEST PRODUCT SECTION START */
+/* ========================================================= */
+
+/* PRODUCT ONE */
+
+.latest-product-section-one .container {
+  background-color: hsl(var(--clr-accent-1));
+  background-position: center -120px;
+  background-repeat: no-repeat;
+  background-size: 575px;
+  border-radius: 8px;
+}
+
+.latest-product-section-one .even-columns {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.latest-speaker-one-image img {
+  margin-block: 3.68rem 1.75rem;
+  height: 205px;
+}
+.latest-speaker-one-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.latest-speaker-one-details h1 {
+  width: 250px;
+  color: #ffffff;
+  letter-spacing: 1.3px;
+  line-height: 40px;
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.latest-speaker-one-details p {
+  width: 270px;
+  color: #ffffff;
+  opacity: 0.75;
+  line-height: 25px;
+  font-size: var(--fs-15);
+  margin-bottom: 1.5rem;
+}
+
+.latest-speaker-one-details a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 165px;
+  border-radius: 0;
+  background-color: black;
+  border: none;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-B);
+  letter-spacing: 1px;
+  margin-bottom: 3.43rem;
+  transition: opacity ease-in-out 250ms;
+}
+
+.latest-speaker-one-details a:hover,
+.latest-speaker-one-details a:focus {
+  opacity: 0.8;
+}
+
+@media (min-width: 48em) {
+  .latest-product-section-one .container {
+    background-position: center -250px;
+    background-repeat: no-repeat;
+    background-size: 900px;
+    border-radius: 8px;
+  }
+  .latest-speaker-one-image img {
+    margin-block: 3.25rem 4rem;
+    height: 220px;
+  }
+  .latest-speaker-one-details h1 {
+    letter-spacing: 2px;
+    line-height: 58px;
+    font-size: var(--fs-56);
+    margin-bottom: 1.5rem;
+  }
+
+  .latest-speaker-one-details p {
+    width: 340px;
+    margin-bottom: 2.5rem;
+  }
+
+  .latest-speaker-one-details a {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .latest-product-section-one .container {
+    background-position: -160px -50px;
+    background-repeat: no-repeat;
+    background-size: 900px;
+    border-radius: 8px;
+  }
+  .latest-product-section-one .even-columns {
+    grid-template-columns: repeat(2, 1fr);
+    height: 560px;
+    overflow: hidden;
+  }
+
+  .latest-speaker-one-image {
+    width: 500px;
+    height: 100%;
+    align-self: end;
+    position: relative;
+  }
+
+  .latest-speaker-one-image img {
+    height: 490px;
+    width: 410px;
+    bottom: -80px;
+    left: 5.5rem;
+    position: absolute;
+  }
+  .latest-speaker-one-details {
+    align-items: start;
+  }
+  .latest-speaker-one-details h1 {
+    text-align: left;
+  }
+
+  .latest-speaker-one-details p {
+    text-align: left;
+  }
+}
+
+@media (min-width: 65em) {
+  .latest-speaker-one-details {
+    margin-top: 2rem;
+  }
+  .latest-product-section-one .container {
+    background-position: -120px -50px;
+    background-repeat: no-repeat;
+    background-size: 920px;
+    border-radius: 8px;
+  }
+  .latest-speaker-one-image img {
+    left: 7.31rem;
+    position: absolute;
+  }
+}
+
+/* PRODUCT TWO */
+
+.latest-product-section-two .even-columns {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  text-align: start;
+  height: 100%;
+}
+
+.latest-product-section-two .container {
+  border-radius: 8px;
+  height: 320px;
+  margin-block: 1.5rem;
+  background-image: url("../../../public/assests/mobile/image-speaker-zx7.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: hsl(0, 0%, 0%, 0.1);
+  background-blend-mode: multiply;
+}
+.latest-speaker-two-details {
+  margin-left: 1.5rem;
+}
+.latest-speaker-two-details h5 {
+  font-size: var(--fs-28);
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.latest-speaker-two-details a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 165px;
+  height: 50px;
+  border-radius: 0;
+  color: black;
+  background: transparent;
+  border: none;
+  outline: 1.75px solid black;
+  text-transform: uppercase;
+  font-weight: var(--fw-B);
+  font-size: var(--fs-13);
+  letter-spacing: 1px;
+  transition: background-color ease-in-out 250ms, color ease-in-out 250ms;
+}
+
+.latest-speaker-two-details a:hover,
+.latest-speaker-two-details a:focus {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 48em) {
+  .latest-product-section-two .container {
+    background-image: url("../../../public/assests/tablet/image-speaker-zx7.jpg");
+  }
+  .latest-speaker-two-details {
+    margin-left: 3.875rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .latest-product-section-two .container {
+    margin-block: 3rem;
+  }
+  .latest-product-section-two .container {
+    background-image: url("../../../public/assests/desktop/image-speaker-zx7.jpg");
+    background-size: cover;
+  }
+  .latest-speaker-two-details {
+    margin-left: 5.975rem;
+  }
+}
+
+/* PRODUCT THREE */
+
+.latest-product-section-three .even-columns {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+}
+
+.latest-earphone-three-image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.latest-earphone-three-details {
+  padding-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 100%;
+  background-color: hsl(var(--clr-bg-1));
+  height: 200px;
+}
+
+.latest-earphone-three-details h5 {
+  font-size: var(--fs-28);
+  letter-spacing: 2px;
+}
+.latest-earphone-three-details a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 165px;
+  height: 50px;
+  border-radius: 0;
+  background: transparent;
+  color: black;
+  border: none;
+  outline: 1.75px solid black;
+  text-transform: uppercase;
+  font-weight: var(--fw-B);
+  font-size: var(--fs-13);
+  letter-spacing: 1px;
+  transition: background-color ease-in-out 250ms, color ease-in-out 250ms;
+}
+
+.latest-earphone-three-details a:hover,
+.latest-earphone-three-details a:focus {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 48em) {
+  .latest-product-section-three .even-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.68rem;
+  }
+  .latest-earphone-three-image,
+  .latest-earphone-three-image img {
+    width: 100%;
+    height: 320px;
+  }
+  .latest-earphone-three-details {
+    height: 100%;
+    padding-left: 2.65rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .latest-product-section-three .even-columns {
+    grid-template-columns: repeat(2, 1fr);
+    height: 320px;
+    gap: 1.875rem;
+  }
+  .latest-earphone-three-image,
+  .latest-earphone-three-image img {
+    width: 100%;
+    height: 320px;
+  }
+  .latest-earphone-three-details {
+    height: 100%;
+    padding-left: 5.93rem;
+    gap: 2rem;
+  }
+}
+/* ========================================================= */
+/* LATEST PRODUCT SECTION END */
+/* ========================================================= */

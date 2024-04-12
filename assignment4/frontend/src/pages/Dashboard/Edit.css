@@ -1,0 +1,108 @@
+.editing-section h1 {
+  font-size: var(--fs-32);
+  text-align: center;
+  margin-block: 3rem 2rem;
+}
+
+.editing-products-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 3rem;
+}
+
+.editing-products-container .item-name {
+  font-size: var(--fs-28);
+  text-transform: uppercase;
+  text-align: center;
+  margin-block: 1.5rem;
+}
+
+.editing-products-container .price-category {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.price-category strong {
+  text-transform: capitalize;
+}
+
+.price-category strong:nth-of-type(1) span {
+  color: hsl(var(--clr-accent-1));
+}
+
+.price-category strong:nth-of-type(2) span {
+  opacity: 0.5;
+}
+
+.edit-delete-button-container {
+  width: 100%;
+  margin-block: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-delete-button-container button {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: 1px solid black;
+  justify-content: center;
+  background-color: hsl(var(--clr-accent-1));
+  font-weight: var(--fw-B);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.edit-delete-button-container a {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  background: none;
+  color: black;
+  text-decoration: none;
+  border: none;
+  outline: 1px solid black;
+  justify-content: center;
+  font-weight: var(--fw-B);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+@media (min-width: 48em) {
+  .editing-section h1 {
+    font-size: var(--fs-40);
+    text-align: left;
+  }
+  .editing-products-container > div img {
+    height: 250px;
+  }
+}
+@media (min-width: 76em) {
+  .editing-products-container > div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .editing-products-container p {
+    max-width: 350px;
+  }
+
+  .editing-products-container .price-category {
+    flex-direction: column;
+    width: auto;
+  }
+  .edit-delete-button-container {
+    flex-direction: column;
+    width: auto;
+  }
+}

@@ -1,0 +1,24 @@
+.speakers-category {
+  background-color: black;
+  color: white;
+  padding-block: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.speakers-category h1 {
+  font-size: var(--fs-28);
+  letter-spacing: 2px;
+}
+
+@media (min-width: 40em) {
+  .speakers-category {
+    padding-block: 6.56rem 6rem;
+  }
+
+  .speakers-category h1 {
+    font-size: var(--fs-40);
+    letter-spacing: 1.43px;
+    line-height: 44px;
+  }
+}

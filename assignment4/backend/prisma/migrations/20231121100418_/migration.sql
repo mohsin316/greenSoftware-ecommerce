@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Orders" ALTER COLUMN "phoneNumber" SET DATA TYPE TEXT,
+ALTER COLUMN "zip" SET DATA TYPE TEXT;

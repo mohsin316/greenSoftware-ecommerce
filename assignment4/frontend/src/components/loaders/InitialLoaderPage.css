@@ -1,0 +1,22 @@
+.loader-page {
+  background-color: #f2f3d9;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.loading-text,
+.headphone-loader {
+  width: 350px;
+  height: 350px;
+}
+
+.headphone-loader {
+  transform: translate(3px, 125px);
+}
+
+.loading-text {
+  transform: translateY(-120px);
+}
+
+/* #f0f4ef #f2f3d9 #e6e8e6*/

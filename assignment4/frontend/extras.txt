@@ -1,0 +1,2 @@
+1) add skeleton laoding
+2) add tap to see full picture for gallary

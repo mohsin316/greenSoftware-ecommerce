@@ -1,0 +1,35 @@
+.speaker-product-section {
+  margin-top: 1rem;
+}
+
+.speaker-product-section .product-details h2 {
+  max-width: 150px;
+}
+
+@media (min-width: 40em) {
+  .speaker-product-section {
+    margin-top: 2rem;
+  }
+  .speaker-product-section .even-columns {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    position: relative;
+    gap: 4.31rem;
+  }
+  .speaker-product-section .even-columns {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .speaker-product-section {
+    margin-top: 5rem;
+  }
+  .speaker-product-section .even-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+  }
+  .speaker-product-section .even-columns {
+    padding-top: 4.7rem;
+  }
+}
